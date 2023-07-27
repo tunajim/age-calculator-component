@@ -1,0 +1,175 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* END MEYERS RESET */
+
+:root {
+    --light-grey: #f0f0f0;
+    --white: #fff;
+    --line: #dcdcdc;
+    --black: #151515;
+    --grey: #716f6f;
+    --purple: #854dff;
+    --red: #ff5959;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+    font-size: 62.5%;
+}
+
+body {
+    height: 100%;
+    background: var(--light-grey);
+    font-family: 'poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    width: 34.3rem;
+    padding: 4.8rem 0;
+    background-color: var(--white);
+    border-radius: 2.4rem 2.4rem 10rem 2.4rem;
+}
+
+.date-form {
+    display: flex;
+    align-items: flex-start;
+    align-self: stretch;
+    gap: 1.6rem;
+}
+
+.date-form__label {
+    font-size: 1.2rem;
+    line-height: normal;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    color: var(--grey);
+    
+}
+
+.input {
+    width: 100%;
+    padding: 1.2rem 1.6rem;
+    box-sizing: border-box;
+    border: 1px solid var(--line);
+    border-radius: 0.8rem;
+    color: var(--black, #151515);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.02rem;
+    
+}
+
+
+
+.margin-sides {
+    margin-left: 2.4rem;
+    margin-right: 2.4rem;
+}
+
+.page-break {
+    position: relative;
+    height: 6.4rem;
+}
+
+.relative {
+    position: relative;
+}
+
+.arrow-button {
+    position: absolute;
+    background: var(--purple);
+    width: 2.4rem;
+    height: 2.4rem;
+    padding: 2rem;
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.page-break hr {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin: 0;
+    
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    font-size: 5.6rem;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 110%;
+    letter-spacing: -0.112rem;
+}
+
+.result__value {
+    color: var(--purple);
+}
+
+.date-form__error-message {
+    color: var(--red);
+    font-size: 1.4rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    
+}
