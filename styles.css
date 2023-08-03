@@ -76,6 +76,11 @@ body {
     align-items: center;
 }
 
+h1 {
+    font-size: 5rem;
+    margin-bottom: 5rem;
+}
+
 main {
     display: flex;
     flex-direction: column;
