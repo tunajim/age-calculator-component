@@ -115,6 +115,33 @@ main {
     
 }
 
+.date-form__input:focus {
+    border: none;
+    outline: none;
+    border: 1px solid var(--purple);
+    /* border-color: var(--red); */
+}
+
+.date-form__label.active {
+    color: var(--red);
+}
+
+.date-form__input.active {
+    border: 1px solid var(--red); 
+}
+
+.date-form__error-message {
+    color: var(--red);
+    font-size: 1.4rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    display: none;
+}
+
+.date-form__error-message.active {
+    display: block;
+}
 
 
 .margin-sides {
@@ -165,21 +192,15 @@ main {
 
 .result__value {
     color: var(--purple);
+    font-size: 5.3rem;
+    
 }
 
 .result__item {
     display: flex;
-    gap: 2rem;
+    gap: .5rem;
 }
 
-.date-form__error-message {
-    color: var(--red);
-    font-size: 1.4rem;
-    font-style: italic;
-    font-weight: 400;
-    line-height: normal;
-    
-}
 
 @media (min-width: 900px) {
     main {
@@ -220,6 +241,8 @@ main {
 
     .date-form__input {
         width: 16rem;
+        font-size: 3.2rem;
+        
     }
 
     .date-form__item {
@@ -233,16 +256,20 @@ main {
         line-height: normal;
     }
 
+    .date-form__error-message.active {
+        display: block;
+    }
+
     /* result section */
 
     .result {
         font-size: 10.4rem;
         line-height: 110%;
         letter-spacing: -0.208rem;
-        
     }
 
     .result__value {
-        
+        font-size: 10.4rem;
     }
 }
+

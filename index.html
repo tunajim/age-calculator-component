@@ -1,85 +1,116 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:svg="http://www.w3.org/2000/xhtml">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Age calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    .attribution { 
-      font-size: 11px; text-align: center; 
-      position: fixed;
-      bottom: 0;
-      padding: 4rem;
-    }
-    .attribution a { color: hsl(228, 45%, 44%); }
-    .icon-arrow {
-      visibility: visible;
-    }
-    
-    .img {
-      background-image: url(/assets/images/icon-arrow.svg);
-      width: 50px;
-      height: 50px;
-    }
-  </style>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
-</head>
-<body>
+    <title>Frontend Mentor | Age calculator app</title>
 
-  <main>
-    <form class="date-form margin-sides">
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        padding: 4rem;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .icon-arrow {
+        visibility: visible;
+      }
 
-      <label class="date-form__item" for="day">
-        <span class="date-form__label">Day</span>
-        <input class="date-form__input" name="day" type="text" placeholder="DD">
-        <p class="date-form__error-message">lorem</p>
-      </label>
-      <label class="date-form__item" for="month">
-        <span class="date-form__label">Month</span>
-        <input class="date-form__input" name="month" type="text" placeholder="MM">
-        <p class="date-form__error-message">lorem</p>
-      </label>
-      <label class="date-form__item" for="year">
-        <span class="date-form__label">Year</span>
-        <input class="date-form__input" name="year" type="text" placeholder="YYYY">
-        <p class="date-form__error-message">lorem</p>
-      </label>
-
-
-    </form>
-    <div class="page-break margin-sides">
-      <hr class="page-break__hr hr-margin">
-      <img class="absolute arrow-button" src="/assets/images/icon-arrow.svg" alt="icon">
-    </div>
-
-    <div class="result margin-sides">
-      <div class="result__item result__years">
-        <span class="result__value">- -</span>
-        <span class="result__label">years</span>
+      .img {
+        background-image: url(/assets/images/icon-arrow.svg);
+        width: 50px;
+        height: 50px;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <form name="date" class="date-form margin-sides">
+        <label class="date-form__item" for="day">
+          <span class="date-form__label">Day</span>
+          <input
+            class="date-form__input"
+            name="day"
+            type="text"
+            placeholder="DD"
+            required
+          />
+          <p class="date-form__error-message date-form__error-message__day">lorem</p>
+        </label>
+        <label class="date-form__item" for="month">
+          <span class="date-form__label">Month</span>
+          <input
+            class="date-form__input"
+            name="month"
+            type="text"
+            placeholder="MM"
+            required
+          />
+          <p class="date-form__error-message date-form__error-message__month">lorem</p>
+        </label>
+        <label class="date-form__item" for="year">
+          <span class="date-form__label">Year</span>
+          <input
+            class="date-form__input"
+            name="year"
+            type="text"
+            placeholder="YYYY"
+            required
+          />
+          <p class="date-form__error-message date-form__error-message__year">lorem</p>
+        </label>
+      </form>
+      <div class="page-break margin-sides">
+        <hr class="page-break__hr hr-margin" />
+        <img
+          class="absolute arrow-button"
+          src="/assets/images/icon-arrow.svg"
+          alt="icon"
+        />
       </div>
-      <div class="result__item result__months">
-        <span class="result__value">- -</span>
-        <span class="result__label">months</span>
-      </div>
-      <div class="result__item result__days">
-        <span class="result__value">- -</span>
-        <span class="result__label">days</span>
-      </div>
 
-    </div>
-
-</main>
-<footer class="attribution">
-  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-  Coded by <a href="#">James Lesperance</a>.
-</footer>
-</body>
+      <div class="result margin-sides">
+        <div class="result__item result__years">
+          <span id="year" class="result__value">- -</span>
+          <span class="result__label">years</span>
+        </div>
+        <div class="result__item result__months">
+          <span id="month" class="result__value">- -</span>
+          <span class="result__label">months</span>
+        </div>
+        <div class="result__item result__days">
+          <span id="day" class="result__value">- -</span>
+          <span class="result__label">days</span>
+        </div>
+      </div>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">James Lesperance</a>.
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
